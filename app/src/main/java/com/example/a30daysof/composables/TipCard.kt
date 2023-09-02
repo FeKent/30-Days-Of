@@ -15,8 +15,10 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.example.a30daysof.data.Tip
 
 @Composable
@@ -43,7 +45,9 @@ fun TipCard(tip: Tip, modifier: Modifier = Modifier) {
                 Text(
                     text = stringResource(id = tip.title),
                     color = MaterialTheme.colorScheme.onPrimaryContainer,
-                    style = MaterialTheme.typography.displaySmall
+                    fontWeight = FontWeight.SemiBold,
+                    fontSize = 20.sp,
+                    textAlign = TextAlign.Center
                 )
             }
             Spacer(modifier = Modifier.size(8.dp))
