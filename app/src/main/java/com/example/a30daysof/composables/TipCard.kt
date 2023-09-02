@@ -3,10 +3,8 @@ package com.example.a30daysof.composables
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Card
@@ -22,9 +20,9 @@ import androidx.compose.ui.unit.dp
 import com.example.a30daysof.data.Tip
 
 @Composable
-fun TipCard(tip: Tip) {
+fun TipCard(tip: Tip, modifier: Modifier = Modifier) {
     Card(
-        modifier = Modifier.fillMaxWidth().wrapContentHeight().padding(horizontal = 4.dp),
+        modifier = modifier,
         shape = RoundedCornerShape(20.dp),
         colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.secondaryContainer)
     ) {
